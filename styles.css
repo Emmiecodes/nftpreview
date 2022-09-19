@@ -37,40 +37,35 @@ border-radius: 2.5%;
 the cyan background-color still showed even though there 
 was no picture to cover anymore. I couldn't find any
 margin/padding issues so I fixed it with overflow: hidden
-and a max height, but it is still not perfect.
-Zoom in to 150% or 200% to see the problem or toggle mobile emulation.
-I also do not quite understand yet what causes the overflow 
-since the image itself isn't overflowing and there's
-nothing left that fills the picture element */
+and a max height, but it was still not perfect. Afterwards I 
+realized that it was the line-height. */
 
 .picture {
     position: relative;
-    display:inline-block;
-    overflow: hidden;
-    max-height: 400px;
+    display: block;
+    line-height: 0%; 
     border-radius: 2.5%;
 }
 
-.picture::before {
-    content:'';
+.picture::before, .picture::after {
     position:absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     opacity: 1;
-    border: 2px solid red;
+    border-radius: 2.5%;
+    transition: transform ease-in 250ms;
+}
+
+.picture::before {
+    content:'';
     background-color: cyan;
     opacity: 0;
 }
 
 .picture::after {
-    content:url(/images/icon-view.svg);
-    position:absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    content: url(images/icon-view.svg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,12 +77,13 @@ opacity: 0.3;
 transition: ease-in 500ms;
 }
 .picture:hover::after {
-    opacity: 1;
-    transition: ease-in 300ms;
+opacity: 1; 
+transition: ease-in 1000ms; 
 }
 
 img { 
 width: 100%;
+border-radius: 2.5%;
 }
 
 .flex {
