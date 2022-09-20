@@ -11,38 +11,35 @@
 </head>
 <body>  
   <main>
-      <div class="container">
-        <a href="#" class="picture">
+      <article class="container">
+        <a href="#" class="container__picture">
         <picture>
-          <img src="images/image-equilibrium.jpg" alt="picture of a transparent 3D cube with pink accents on a blue background">
+          <img src="images/image-equilibrium.jpg" 
+          class="picture__content"
+          alt="A transparent 3D cube with pink accents on a blue background">
         </picture>
         </a>
-      <section>
-        <h1>
+        <h1 class="container__H1">
           Equilibrium #3429
         </h1>
-        <p class="soft">
+        <p class="container__p">
         Our Equilibrium collection promotes balance and calm.
         </p>
-        <div class="flex border">
-          <div class="flex">
-           <svg aria-hidden="true" width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>
-           <p class="cyan">0.041 ETH</p>
+        <div class="Flex-border">
+          <div class="Flex-border__flex">
+           <svg class="Flex-border__svg"aria-hidden="true" width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>
+           <p class="Flex-border__ETH">0.041 <abbr class="Flex-border__ETH--abbr" title="Ethereum, a cryptocurrency">ETH</abbr></p>
           </div>
-          <div class="flex">
-            <svg aria-hidden="true" class="svg" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>
-            <p class="soft">3 days left</p>
+          <div class="Flex-border__flex">
+            <svg class="Flex-border__svg" aria-hidden="true" class="svg" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>
+            <p class="Flex-border__daysLeft">3 days left</p>
           </div>
         </div>
-        <div class="flex creation soft">
-          <picture class="avatarMargin">
-            <img class="avatar" src="images/image-avatar.png" alt="a white boy with brown hair, bangs and a cream colored shirt">
-          </picture>
-          <p>Creation of <a href="#" class="creator">Jules Wyvern</a></p>
-        </div>
-      </section>
-
-      </div>
+        <figure class="CreatorFlex">
+            <img class="CreatorFlex__avatar" src="images/image-avatar.png" alt="hite boy with brown hair, bangs and a cream colored shirt">
+          <figcaption class="CreatorFlex__creationOf">Creation of <a href="#" class="CreatorFlex__creator">Jules Wyvern</a></figcaption>
+        </figure>
+    </article>
   </main>
 </body>
 </html>
